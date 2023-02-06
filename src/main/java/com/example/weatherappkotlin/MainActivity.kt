@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tvResponse = findViewById(R.id.tvResponse)
+        //tvResponse = findViewById(R.id.tvResponse)
 
         //TODO: Create retrofit instance
         val retrofit = Retrofit.Builder()
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         result.enqueue(object : Callback<String> {
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 if (response.isSuccessful) {
-                    tvResponse.text = response.body()
+                   // tvResponse.text = response.body()
                 }
             }
 
